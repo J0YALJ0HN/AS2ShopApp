@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">KwesiJames</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="repassword">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="postcode">Postcode</string>
+    <string name="signin">Sign In</string>
+    <string name="btnsignup">Register</string>
+    <string name="btnsignin">Existing User? Tap here to Sign in</string>
+    <string name="btnsignup2">Don\'t have an account with us? Tap here to Register</string>
+    <string name="basket">Basket</string>
+    <string name="shop">Shop</string>
+    <string name="browse">Browse</string>
+    <string name="profile">Profile</string>
+</resources>

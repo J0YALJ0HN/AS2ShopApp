@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/gradient_bg_v2"
+    tools:context=".AdminActivity">
+
+    <EditText
+        android:id="@+id/prodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:hint="Product Name"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/prodDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/prodName"
+        android:hint="Description"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/prodDesc"
+        android:hint="Category"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/prodListPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/category"
+        android:hint="List Price £"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/prodRetailPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/prodListPrice"
+        android:hint="Retail Price £"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/prodQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/prodRetailPrice"
+        android:inputType="number"
+        android:hint="Stock Quantity"
+        >
+    </EditText>
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert Data"
+        android:textSize="24dp"
+        android:layout_below="@+id/prodQuantity"
+        android:layout_marginTop="20dp"
+        >
+    </Button>
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Data"
+        android:textSize="24dp"
+        android:layout_below="@+id/btnInsert"
+        android:layout_marginTop="20dp"
+        >
+    </Button>
+
+
+</RelativeLayout>

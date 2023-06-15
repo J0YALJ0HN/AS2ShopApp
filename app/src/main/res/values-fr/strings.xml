@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">KwesiJames</string>
+    <string name="username">Nom</string>
+    <string name="password">Mot de passe</string>
+    <string name="repassword">Confirmez le mot de passe</string>
+    <string name="email">Email</string>
+    <string name="address">Adresse</string>
+    <string name="postcode">Code postal</string>
+    <string name="signin">Connexion</string>
+    <string name="btnsignup">Enregistrer</string>
+    <string name="btnsignin">Utilisateur existant? Cliquez ici pour vous connecter</string>
+    <string name="btnsignup2">Non enregistré? Cliquez ici pour vous inscrire</string>
+    <string name="basket">Panier</string>
+    <string name="shop">Boutique</string>
+    <string name="browse">Parcourir</string>
+    <string name="profile">Profil</string>
+</resources>
