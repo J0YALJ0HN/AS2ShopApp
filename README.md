@@ -1,9 +1,9 @@
-# Sample_Shop_App
+**# Sample_Shop_App**
 Beta version of shop app made for owner "Kwesi James"
 
-_Usernames and Passwords for all relevant accounts_
+**_Usernames and Passwords for all relevant accounts_**
 
-_Usernames |  Passwords_
+**_Usernames |  Passwords_**
 admin|adminkj
 yuh|yuh
 bruh|bruh
@@ -12,10 +12,10 @@ test1|password
 
 
 
-_Methodology_
+**_Methodology_**
 
 
-MainActivity.java and activity_main.xml
+**MainActivity.java and activity_main.xml**
 MainActivity.java serves as the main entry point into the app, handling user interactions for signing in and signing up. 
 UI elements such as EditText for username and password, and Button for login and signup, are initialized on the OnCreate method, as well as an instance of the DBHelper class is also created for database operations.
 SharedPreferences are used to store the current session of the username of the user that logged in, into MyPrefs to be used for table Basket later.
@@ -25,7 +25,7 @@ The method for btnLogin is a large if-statement with checkuserpass method from D
 Btnsignup takes the user to RegisterActivity for the user to make a new account.
 
  
-RegisterActivity.java and activity_register.xml
+**RegisterActivity.java and activity_register.xml**
 The layout for activity_register.xml is like activity_main, except with more edittexts to allow more input of data.
 
 For RegisterActivity.java, is in functionality very similar to MainActivity except gathering more info from the user, as well as passing the users details into the Users table in Database.db using DBHelper.
@@ -35,7 +35,7 @@ The signin button, when clicked, starts the MainActivity too.
 
  
 Methods for checking credentials stored in DBHelper.
-DBHelper.java
+**DBHelper.java**
 DBHelper.java is the backbone of the app being useful for:
 
 Database Creation and Upgrade: The onCreate method is responsible for creating the necessary database tables when the database is initially created. It defines the structure of tables for Users, Products, and Basket. 
@@ -46,7 +46,7 @@ Data Retrieval Methods: The getData method retrieves all data from the Products 
 Not only that, the getCurrentDateTime method returns the current date and time in a specific format, allowing me to add timestamps to database records, tracking registration dates, and keeping the database up to date.
 
 
-AdminActivity.java, activity_admin.xml, ListAdmin.java, activity_list_admin.xml, and productcard.xml   
+**AdminActivity.java, activity_admin.xml, ListAdmin.java, activity_list_admin.xml, and productcard.xml   **
 AdminActivity allows the admin to insert new products into the database by providing relevant information. Whilst the DBHelper class is used to facilitate database operations. The view button starts a new activity ListAdmin to display the list of products. 
 The insert button performs the following actions when clicked:
 
@@ -67,7 +67,7 @@ Activity_list_admin.xml contains the recyclerview, and it also uses Productcard.
  
 The displayData() method retrieves the product data from the database using the getData() method of the DBHelper class. If there are no entries in the database, a toast message is displayed to indicate that no products exist. Otherwise, the retrieved data is iterated through using a cursor, and the relevant information is added to the corresponding ArrayList objects.
  
-HomeActivity.java, activity_home.xml
+**HomeActivity.java, activity_home.xml**
 HomeActivity is responsible for being the activity that displays the three fragments in this project: BasketFragment, ShopFragment, and ProfileFragment.
 
 The code first retrieves the username from the shared preferences using the SharedPreferences object, then the stored username is displayed in a toast message to provide a personalized welcome message to the user.
@@ -76,7 +76,7 @@ The onBackPressed method is overridden to prevent accidental logout. When the us
  
 The layout has been customized to have tabber-like buttons.
 
-ShopAdapter.java, and dialog_add_to_basket.xml
+**ShopAdapter.java, and dialog_add_to_basket.xml**
 ShopAdapte.java is responsible for populating the RecyclerViews in both ListAdmin and ShopFragment.java with product data. It also includes a dialog for adding items to the basket.
 
 The ShopAdapter class extends RecyclerView.Adapter and is responsible for managing the data and views in the RecyclerView. It receives various lists of product information and initializes the necessary variables, such as the Context, product lists, and DBHelper.
@@ -86,7 +86,7 @@ The adapter also allows the recyclerview cards to be clicked; when an item is cl
 The showDialog method builds and displays the dialog using an AlertDialog.Builder. Allowing the user to add or subtract the item quantity using buttons. Upon clicking the "Add" button, it retrieves the selected product name, retail price, and the user's username from shared preferences. It then calls the insertBasketData method of the DBHelper class to insert the item into the basket table in the database.
 
 
-ShopFragment.java, BasketFragment.java, ProfileFragment.java, and Layouts
+**ShopFragment.java, BasketFragment.java, ProfileFragment.java, and Layouts**
 The ShopFragment class utilizes separate RecyclerView instances and ShopAdapter objects to display product data for various categories. It retrieves data from a database using a DBHelper instance and populates category-specific lists with the help of Cursor objects. Each RecyclerView is associated with a specific category and its respective adapter. The fragment sets up and configures the RecyclerView and adapter instances for each category, allowing the products to be displayed appropriately in the UI.
 
 BasketFragment has not been fully implemented; ideally I would have liked to populate a recyclerview of the Basket table in basketfragment and proceed to checking out, however my organization skills has been lacking.
@@ -95,9 +95,7 @@ ProfileFragment contains an intent button for the user to click and log out of t
 
 The layouts for BasketFragment consisted of textviews of category names, and under each dedicated category name, is the respective recyclerview displaying the product cards of that specific category.
 
-
-_Blackbox Testing_
-Input	Expected Output	Actual Output	Screenshot
+**_Blackbox Testing_**
 Duplicate Entries in Products	Add extra in quantity of that duplicate	Duplicated “Bat” and it incremented the quantity in the database, from 110, to 220 (110+110)	 
 Basket quantity negative numbers	Prevention in going to negatives	Prevention in going to negatives	 
 Test with an empty database.	Functional insertion	Functional insertion	-
